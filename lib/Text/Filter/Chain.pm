@@ -1,9 +1,9 @@
 package Text::Filter::Chain; # chains multiple filters and runs them sequentially
-# $Id: Chain.pm,v 1.4 2000/09/25 15:55:52 verhaege Exp $
+# $Id: Chain.pm,v 1.5 2000/12/05 15:53:52 verhaege Exp $
 use strict;
 use vars qw($VERSION);
 use fields qw(filters input output);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $proto = shift;
@@ -137,12 +137,17 @@ C<Text::Filter::Chain>. The following requirements need to be met:
 
 =over 2
 
-=item a set_input() method must be available for setting the filter input;
+=item 
 
-=item a set_output() method must be available for setting the filter output;
+a set_input() method must be available for setting the filter input;
 
-=item a run() method must be available which runs the filter 
-on its entire input.
+=item 
+
+a set_output() method must be available for setting the filter output;
+
+=item 
+
+a run() method must be available which runs the filter on its entire input.
 
 =back
 
